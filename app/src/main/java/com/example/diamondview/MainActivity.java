@@ -1,7 +1,7 @@
 package com.example.diamondview;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private DiamondView diamondView;
     private int screenWidth;
