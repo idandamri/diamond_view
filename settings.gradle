@@ -1,2 +1,2 @@
-include ':app', ':diamondprogressview'
+include ':app'
 rootProject.name='DiamondView'
