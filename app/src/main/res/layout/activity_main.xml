@@ -4,15 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D5FFF6"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seek"
+        app:layout_constraintBottom_toTopOf="@+id/et_percent"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seek_gradient"
+        app:layout_constraintBottom_toTopOf="@+id/et_percent"
+        android:layout_marginBottom="60dp"
+        android:progressBackgroundTint="@color/colorPrimaryDark"
+        android:thumbTint="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/pb"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginLeft="10dp"
+        android:text="OK"
+        app:layout_constraintLeft_toRightOf="@+id/et"
+        app:layout_constraintTop_toTopOf="@+id/et" />
+
+
+    <EditText
+        android:id="@+id/et_percent"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:hint="select a number from 0 to 100"
+        app:layout_constraintRight_toLeftOf="@+id/btn_percent"
+        app:layout_constraintBottom_toTopOf="@+id/et"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btn_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="% OK %"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/et_percent"
+        app:layout_constraintTop_toTopOf="@+id/et_percent" />
+
+    <com.example.footballprogressbar.DiamondView
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
