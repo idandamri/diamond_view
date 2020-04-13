@@ -62,13 +62,12 @@
         app:layout_constraintLeft_toRightOf="@+id/et_percent"
         app:layout_constraintTop_toTopOf="@+id/et_percent" />
 
-    <com.example.footballprogressbar.DiamondView
+    <com.example.diamondview.DiamondView
         android:id="@+id/pb"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
